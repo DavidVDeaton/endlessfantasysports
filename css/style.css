@@ -8,8 +8,18 @@ div {
     margin: 5px;
 }
 
+p {
+    margin: 0px, 0px, 8px;
+}
+
+button {
+    margin: 5px;
+    justify-self: center;
+}
+
 
 .scores {
     float: left;
     border: solid;
+    font-family: "Lexend Peta", sans-serif;
 }

@@ -41,8 +41,8 @@ $("#gm" +i).append(gameHome);
 if (response[i].Status === "Final")
 $("#gmStat" + i).text(response[i].Status);
 
-else if (response[i].Status === "Live")
-$("#gmStat" + i).text(response[i].Quarter);
+else if (response[i].Status === "InProgress")
+$("#gmStat" + i).text("QTR " + response[i].Quarter + " " + response[i].TimeRemainingMinutes + ":" + response[i].TimeRemainingSeconds);
 
 else if (response[i].Status === "Scheduled") {
 var startHour = response[i].DateTime[11] +  response[i].DateTime[12];
@@ -51,7 +51,7 @@ if (startHour > 11) {
   startHour = startHour - 12;
 }
 console.log(startHour);
-$("#gmStat" + i).text(startHour + ":" + response[i].DateTime[14] + response[i].DateTime[15] + " ET");
+$("#gmStat" + i).text(startHour + ":" + response[i].DateTime[14] + response[i].DateTime[15] + " PM ET");
 }
 
 if (response[i].AwayTeamScore === null) {
