@@ -1,0 +1,15 @@
+body {
+    font-family: "Permanent Marker", cursive;
+}
+
+div {
+    font-family: "Permanent Marker", cursive;
+    background-color: purple;
+    margin: 5px;
+}
+
+
+.scores {
+    float: left;
+    border: solid;
+}
