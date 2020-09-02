@@ -1,4 +1,32 @@
-var week = "1";
+function updateWeek() {
+
+    //var now = moment().format("MM-DD-YY");
+    var now = "09-20-20";
+    console.log(now);
+
+    if (now < "09-15-20") {
+        var week = 1;
+        localStorage.setItem("week", week);
+    }
+    else if (now > "09-14-20" && now < "09-22-20") {
+        var week = 2;
+        localStorage.setItem("week", week);
+    }
+    else {
+        var week = 3;
+        localStorage.setItem("week", week);
+    }
+
+}
+
+updateWeek();
+
+
+
+var week = localStorage.getItem("week");
+console.log(week);
+
+$("#weekNo").text("Week " + week);
 
 var queryURL = "https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2020/" + week + "?key=3efa69063c844191a2ddeba7e1356b50"
 
@@ -39,10 +67,12 @@ method: "GET"
             text: response[i].AwayTeam,
             id: response[i].AwayTeam,
             click: function () {
-                var week1entry = this.id;
-                console.log(week1entry);
+                var weekentry = this.id;
+                $("#gm" + weekentry).addClass("orange");
+                console.log(weekentry);
 
-                localStorage.setItem("week1", week1entry);
+                localStorage.setItem("week" + week, weekentry);
+                $(".centerBtn").remove();
             }
         });
 
@@ -51,11 +81,11 @@ method: "GET"
             text: response[i].HomeTeam,
             id: response[i].HomeTeam,
             click: function () {
-                var week1entry = this.id;
-                $("#gm" + week1entry).addClass("orange");
-                console.log(week1entry);
+                var weekentry = this.id;
+                $("#gm" + weekentry).addClass("orange");
+                console.log(weekentry);
 
-                localStorage.setItem("week1", week1entry);
+                localStorage.setItem("week" + week, weekentry);
                 $(".centerBtn").remove();
             }
         });
