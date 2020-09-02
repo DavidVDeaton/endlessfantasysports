@@ -8,18 +8,30 @@ div {
     margin: 5px;
 }
 
+h1 {
+    float: left;
+}
+.orange {
+    border: solid;
+    border-color: orange;
+}
+
 p {
+    justify-items: center;
     margin: 0px, 0px, 8px;
 }
 
 button {
     margin: 5px;
-    justify-self: center;
+    float: left;
+    font-family: "Lexend Peta", sans-serif;
 }
 
 
 .scores {
     float: left;
+    min-width: 200px;
+    min-height: 25px;
     border: solid;
     font-family: "Lexend Peta", sans-serif;
 }
