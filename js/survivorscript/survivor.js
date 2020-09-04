@@ -11,6 +11,10 @@ $(window).on("load", function() {
 
 });
 
+$(".message a").click(function() {
+    $("form").animate({height: "toggle", opacity: "toggle"},)
+});
+
 $(".selectWeek").on("click", function() {
 
     $(".card").remove();
@@ -31,7 +35,13 @@ $(".selectWeek").on("click", function() {
     localStorage.setItem("week", week);
     $("#weekNo").text("Week " + week);
 
-    queryAPI();
+    if (localStorage.getItem("week" + week) === null) {
+        selectedTeams();
+    }
+
+    else {
+        queryAPI();
+    }
 
 });
 

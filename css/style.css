@@ -16,6 +16,14 @@ h1 {
     border-color: orange;
 }
 
+form {
+    font-family: "Lexend Peta", sans-serif;
+}
+
+.form .register-form {
+    display: none;
+}
+
 p {
     justify-items: center;
     margin: 0px, 0px, 8px;
@@ -31,7 +39,7 @@ button {
 .scores {
     float: left;
     min-width: 200px;
-    min-height: 25px;
+    min-height: 200Spx;
     border: solid;
     font-family: "Lexend Peta", sans-serif;
 }
