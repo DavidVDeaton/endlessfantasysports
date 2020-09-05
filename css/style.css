@@ -2,31 +2,78 @@ body {
     font-family: "Permanent Marker", cursive;
 }
 
+nav {
+    background-color: orangered;
+}
+
+input {
+    margin-top: 5px;
+    max-width: 200px;
+}
+
 div {
     font-family: "Permanent Marker", cursive;
-    background-color: purple;
     margin: 5px;
 }
 
 h1 {
     float: left;
 }
+
+h3 {
+    float: left;
+    color: orangered;
+}
+
 .orange {
     border: solid;
-    border-color: orange;
+    border-color: orangered;
 }
 
 form {
     font-family: "Lexend Peta", sans-serif;
 }
 
+.message {
+    font-size: 8pt;
+    text-align: center;
+}
+
 .form .register-form {
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+
+.revealed {
+    display: inline-flex;
+}
+
 p {
     justify-items: center;
-    margin: 0px, 0px, 8px;
+    margin: 8px, 0px, 8px;
+}
+
+#cancel {
+    float: right;
+    margin-left: 1rem ;
+}
+
+#save {
+    float: right;
+    margin-left: 1rem;
+}
+
+#edit {
+    float: right;
+    margin-top: 0rem;
+    margin-left: .5rem;
+}
+
+section {
+    background-color: rebeccapurple;
 }
 
 button {

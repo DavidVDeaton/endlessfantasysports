@@ -35,13 +35,9 @@ $(".selectWeek").on("click", function() {
     localStorage.setItem("week", week);
     $("#weekNo").text("Week " + week);
 
-    if (localStorage.getItem("week" + week) === null) {
-        selectedTeams();
-    }
 
-    else {
-        queryAPI();
-    }
+    queryAPI();
+    
 
 });
 

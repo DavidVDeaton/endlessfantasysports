@@ -2,6 +2,7 @@
 <html lang="en-us">
     <head>
         <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Endless Fantasy Sports</title>
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
         <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
@@ -14,25 +15,7 @@
         <!-- Navigation Bar -->
         <nav class = "navbar wrapper">
     
-        <h1>Endless Fantasy Sports</h1>
-            
-            <ul>
-            <li>
-               
-                <button id = "btnH20" type="button" class="btn btn-outline-warning">Survivor</button>
-                
-            </li>
-            <li>
-                <a href = "football.html">
-                <button type="button" class="btn btn-outline-warning">Fantasy Football</button>
-                </a>
-            </li>
-            <li>
-                <a href = "profile.html">
-                <button type="button" class="btn btn-outline-warning">Profile</button>
-                </a>
-            </li>
-            </ul>
+            <h1>Endless Fantasy Sports</h1>
 
             <div class="login-page">
                 <div class="form">
@@ -42,7 +25,6 @@
                         <input type="text" placeholder="email"/>
                         <button type="button" class= "btn btn-primary">Create Login</button>
                         <p class= "message">Already Registered? <a href="#">Login</a></p>
-
                     </form>
 
                     <form class = "login-form">
@@ -51,11 +33,7 @@
                         <button type="button" class = "btn btn-primary">Login</button>
                         <p class= "message">Not Registered? <a href="#">Create Account</a></p>
                     </form>
-
-
-
                 </div>
-
             </div>
         </nav>
         
@@ -66,35 +44,42 @@
 
             <!-- Row 1 -->
             <div class = "row">
-              <div class = "col-md-12 week1">
-                <h1 id = "weekNo" class = "col-md-4"></h1>
-                <p class= "col-md-12">                
-                  <button id="week01" type="button" class="selectWeek btn btn-secondary btn-sm">1</button>
-                  <button id="week02" type="button" class="selectWeek btn btn-secondary btn-sm">2</button>
-                  <button id="week03" type="button" class="selectWeek btn btn-secondary btn-sm">3</button>
-                  <button id="week04" type="button" class="selectWeek btn btn-secondary btn-sm">4</button>
-                  <button id="week05" type="button" class="selectWeek btn btn-secondary btn-sm">5</button>
-                  <button id="week06" type="button" class="selectWeek btn btn-secondary btn-sm">6</button>
-                  <button id="week07" type="button" class="selectWeek btn btn-secondary btn-sm">7</button>
-                  <button id="week08" type="button" class="selectWeek btn btn-secondary btn-sm">8</button>
-                  <button id="week09" type="button" class="selectWeek btn btn-secondary btn-sm">9</button>
-                  <button id="week10" type="button" class="selectWeek btn btn-secondary btn-sm">10</button>
-                  <button id="week11" type="button" class="selectWeek btn btn-secondary btn-sm">11</button>
-                  <button id="week12" type="button" class="selectWeek btn btn-secondary btn-sm">12</button>
-                  <button id="week13" type="button" class="selectWeek btn btn-secondary btn-sm">13</button>
-                  <button id="week14" type="button" class="selectWeek btn btn-secondary btn-sm">14</button>
-                  <button id="week15" type="button" class="selectWeek btn btn-secondary btn-sm">15</button>
-                  <button id="week16" type="button" class="selectWeek btn btn-secondary btn-sm">16</button>
-                  <button id="week17" type="button" class="selectWeek btn btn-secondary btn-sm">17</button>
-                </p>
-              </div>
+                <div class = "col-md-12 week1">
+                    <h1 id = "weekNo" class = "col-md-4"></h1>
+                    <p class= "col-md-12">                
+                        <button id="week01" type="button" class="selectWeek btn btn-secondary btn-sm">1</button>
+                        <button id="week02" type="button" class="selectWeek btn btn-secondary btn-sm">2</button>
+                        <button id="week03" type="button" class="selectWeek btn btn-secondary btn-sm">3</button>
+                        <button id="week04" type="button" class="selectWeek btn btn-secondary btn-sm">4</button>
+                        <button id="week05" type="button" class="selectWeek btn btn-secondary btn-sm">5</button>
+                        <button id="week06" type="button" class="selectWeek btn btn-secondary btn-sm">6</button>
+                        <button id="week07" type="button" class="selectWeek btn btn-secondary btn-sm">7</button>
+                        <button id="week08" type="button" class="selectWeek btn btn-secondary btn-sm">8</button>
+                        <button id="week09" type="button" class="selectWeek btn btn-secondary btn-sm">9</button>
+                        <button id="week10" type="button" class="selectWeek btn btn-secondary btn-sm">10</button>
+                        <button id="week11" type="button" class="selectWeek btn btn-secondary btn-sm">11</button>
+                        <button id="week12" type="button" class="selectWeek btn btn-secondary btn-sm">12</button>
+                        <button id="week13" type="button" class="selectWeek btn btn-secondary btn-sm">13</button>
+                        <button id="week14" type="button" class="selectWeek btn btn-secondary btn-sm">14</button>
+                        <button id="week15" type="button" class="selectWeek btn btn-secondary btn-sm">15</button>
+                        <button id="week16" type="button" class="selectWeek btn btn-secondary btn-sm">16</button>
+                        <button id="week17" type="button" class="selectWeek btn btn-secondary btn-sm">17</button>
+                    </p>
+                </div>
             </div>
 
             <!-- Row 2 -->
+            <div id="hidden" class="hidden row">
+                <div class="error-save col-md=12">
+                    <p class = "col-md-12">
+                        <h3 id= "newmessage" class= "col-md-12"></h3>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
             <div id= "weekGames" class = "row card-deck">
             </div>  
-
-
 
         </section>
 
@@ -103,7 +88,6 @@
         <script src="../js/survivorscript/survivor.js"></script>
         <script src="../js/survivorscript/queryAPI.js"></script>
         <script src="../js/survivorscript/updateWeek.js"></script>
-        <script src="../js/survivorscript/button.js"></script>
 
     </body>
 </html>

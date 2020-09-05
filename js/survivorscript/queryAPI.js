@@ -37,1140 +37,136 @@ function queryAPI() {
             $("#gm" +i).append(gameHome);
             $("#gm" +i).append(buttonRow);
     
-            if (response[i].AwayTeam === localStorage.getItem("week1")) {
 
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week1")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week2")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week2")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week3")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week3")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week4")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week4")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week5")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week5")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week6")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week6")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week7")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week7")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week8")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week8")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week9")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week9")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week10")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week10")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week11")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week11")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week12")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week12")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week13")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week13")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week14")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week14")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week15")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week15")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week16")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week16")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].AwayTeam === localStorage.getItem("week17")) {
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    disabled: true,
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else if (response[i].HomeTeam === localStorage.getItem("week17")) {
-                console.log(response[i].HomeTeam);
-
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    disabled: true,
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
-
-            else {
-                var awayBtn = $("<button>", {
-                    class: "btn btn-secondary btn-sm",
-                    text: response[i].AwayTeam,
-                    id: response[i].AwayTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-        
-                var homeBtn = $("<button>", {
-                    class: "btn btn-primary btn-sm",
-                    text: response[i].HomeTeam,
-                    id: response[i].HomeTeam,
-                    click: function () {
-                        var weekentry = this.id;
-                        $("#gm" + weekentry).addClass("orange");
-                        console.log(weekentry);
-        
-                        localStorage.setItem("week" + week, weekentry);
-                        $(".centerBtn").remove();
-                    }
-                });
-            }
+            var awayBtn = $("<button>", {
+                class: "btn btn-secondary btn-sm",
+                text: response[i].AwayTeam,
+                id: response[i].AwayTeam,
+                click: function () {
+                    var weekNum = parseInt(week);
+                    console.log(weekNum);
+
+                    var weekentry = this.id;
+
+                    var j;
+                    for (j=weekNum; j > 0; j--){
+
+                        var prevEntry = localStorage.getItem("week" + j);
+                        console.log(prevEntry);
+                    
+                        if (prevEntry === weekentry) {
+                            $("#hidden").removeClass("hidden");
+                            $("#newmessage").text("You picked " + weekentry + " in a previous week. Select a different team.");
+                            return;
+                        }
+
+                        else {
+                            $("#hidden").removeClass("hidden");
+                            $("#newmessage").text("Are you sure you want to pick " + weekentry + "?");
+                            var saveBtn = $("<button>", {
+                                class: "btn btn-secondary btn-sm",
+                                text: "Save",
+                                id: "save",
+                                click: function () {
+                                    localStorage.setItem("week" + week, weekentry);
+                                    $(".centerBtn").addClass("hidden");
+                                    $("#gm" + weekentry).addClass("orange");
+                                    $("#hidden").addClass("hidden");
+                                    var editBtn = $("<button>", {
+                                        class: "btn btn-secondary btn-sm",
+                                        text: "Edit",
+                                        id: "edit",
+                                        click: function () {
+                                            localStorage.removeItem("week" + week, weekentry);
+                                            $(".centerBtn").removeClass("hidden");
+                                            $("#gm" + weekentry).removeClass("orange");
+                                            $("#edit").remove();
+                                        }
+                                    });
+                                    $("#gm" + weekentry).append(editBtn);
+                                }
+                            });
+
+                            var cancelBtn = $("<button>", {
+                                class: "btn btn-secondary btn-sm",
+                                text: "Cancel",
+                                id: "cancel",
+                                click: function () {
+                                    $("#hidden").addClass("hidden");
+                                }
+                            });
+
+                            $("#newmessage").append(saveBtn);
+                            $("#newmessage").append(cancelBtn);
+                        }
+                    }  
+                }
+            });
+    
+            var homeBtn = $("<button>", {
+                class: "btn btn-primary btn-sm",
+                text: response[i].HomeTeam,
+                id: response[i].HomeTeam,
+                click: function () {
+                    var weekNum = parseInt(week);
+                    console.log(weekNum);
+
+                    var weekentry = this.id;
+
+                    var j;
+                    for (j=weekNum; j > 0; j--){
+
+                        var prevEntry = localStorage.getItem("week" + j);
+                        console.log(prevEntry);
+                    
+                        if (prevEntry === weekentry) {
+                            $("#hidden").removeClass("hidden");
+                            $("#newmessage").text("You picked " + weekentry + " in a previous week. Select a different team.");
+                            return;
+                        }
+
+                        else {
+                            $("#hidden").removeClass("hidden");
+                            $("#newmessage").text("Are you sure you want to pick " + weekentry + "?");
+                            var saveBtn = $("<button>", {
+                                class: "btn btn-secondary btn-sm",
+                                text: "Save",
+                                id: "save",
+                                click: function () {
+                                    localStorage.setItem("week" + week, weekentry);
+                                    $(".centerBtn").addClass("hidden");
+                                    $("#gm" + weekentry).addClass("orange");
+                                    $("#hidden").addClass("hidden");
+                                    var editBtn = $("<button>", {
+                                        class: "btn btn-secondary btn-sm",
+                                        text: "Edit",
+                                        id: "edit",
+                                        click: function () {
+                                            localStorage.removeItem("week" + week, weekentry);
+                                            $(".centerBtn").removeClass("hidden");
+                                            $("#gm" + weekentry).removeClass("orange");
+                                            $("#edit").remove();
+                                        }
+                                    });
+                                    $("#gm" + weekentry).append(editBtn);
+                                }
+                            });
+
+                            var cancelBtn = $("<button>", {
+                                class: "btn btn-secondary btn-sm",
+                                text: "Cancel",
+                                id: "cancel",
+                                click: function () {
+                                    $("#hidden").addClass("hidden");
+                                }
+                            });
+
+                            $("#newmessage").append(saveBtn);
+                            $("#newmessage").append(cancelBtn);
+                        }
+                    }  
+                }
+            });
             
             $("#btnRow" +i).append(awayBtn);
             $("#btnRow" +i).append(homeBtn);
