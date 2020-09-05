@@ -1,13 +1,25 @@
+var week = localStorage.getItem("week");
+console.log(week);
+
+var selection = "week" + week;
+console.log(selection);
+
 $(window).on("load", function() {
 
     updateWeek();
+    
+    $("#weekNo").text(selection);
 
-    var week = localStorage.getItem("week");
-    console.log(week);
-    
-    $("#weekNo").text("Week " + week);
-    
-    queryAPI();
+    if (localStorage.getItem(selection) != null) {
+        selectedTeams();
+        var pickedTeam = localStorage.getItem(selection);
+        console.log(pickedTeam);
+        $("#gmBUF").addClass("orange");
+    }
+
+    else {
+        queryAPI();
+    }
 
 });
 
@@ -30,27 +42,18 @@ $(".selectWeek").on("click", function() {
         var week = entry[4]+entry[5];
     }
 
-    console.log(week);
-
     localStorage.setItem("week", week);
     $("#weekNo").text("Week " + week);
 
+    if (localStorage.getItem(selection) != null) {
+        selectedTeams();
+        var pickedTeam = localStorage.getItem(selection);
+        $("#gm" + pickedTeam).addClass("orange");
+    }
 
-    queryAPI();
-    
+    else {
+        queryAPI();
+    }
 
 });
-
-// function disableBtn() {
-
-//     // var i;
-//     // for (i=1; i<18; i++){
-
-//         var teamSelect = localStorage.getItem("week1");
-//         $("#DET").attr(disabled);
-//         console.log(teamSelect);
-//     //}
-// }
-
-// disableBtn();
 
