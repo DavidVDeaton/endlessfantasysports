@@ -37,7 +37,6 @@ function queryAPI() {
             $("#gm" +i).append(gameHome);
             $("#gm" +i).append(buttonRow);
     
-
             var awayBtn = $("<button>", {
                 class: "btn btn-secondary btn-sm",
                 text: response[i].AwayTeam,
@@ -206,5 +205,4 @@ function queryAPI() {
             }
         }
     });
-    
 }
