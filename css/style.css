@@ -68,8 +68,8 @@ p {
 
 #edit {
     float: right;
-    margin-top: 0rem;
-    margin-left: .5rem;
+    margin-top: .5rem;
+    margin-left: .25rem;
 }
 
 section {
@@ -78,6 +78,7 @@ section {
 
 button {
     margin: 5px;
+    margin-top:.5rem;
     float: left;
     font-family: "Lexend Peta", sans-serif;
 }

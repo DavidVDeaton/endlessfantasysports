@@ -1,24 +1,25 @@
-var week = localStorage.getItem("week");
-console.log(week);
-
-var selection = "week" + week;
-console.log(selection);
-
 $(window).on("load", function() {
 
     updateWeek();
+
+    var week = localStorage.getItem("week");
+    console.log(week);
+
+    var selection = "week" + week;
+    console.log(selection);
     
-    $("#weekNo").text(selection);
+    $("#weekNo").text("Week " + week);
 
     if (localStorage.getItem(selection) != null) {
         selectedTeams();
-        var pickedTeam = localStorage.getItem(selection);
-        console.log(pickedTeam);
-        $("#gmBUF").addClass("orange");
+        console.log("load-selectedTeams");
+        
     }
 
     else {
         queryAPI();
+        console.log("load-queryAPI");
+
     }
 
 });
@@ -45,14 +46,14 @@ $(".selectWeek").on("click", function() {
     localStorage.setItem("week", week);
     $("#weekNo").text("Week " + week);
 
-    if (localStorage.getItem(selection) != null) {
+    if (localStorage.getItem("week" + week) != null) {
         selectedTeams();
-        var pickedTeam = localStorage.getItem(selection);
-        $("#gm" + pickedTeam).addClass("orange");
+        console.log("click-selectedTeams");
     }
 
     else {
         queryAPI();
+        console.log("click-queryAPI");
     }
 
 });

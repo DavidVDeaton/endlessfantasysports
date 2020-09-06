@@ -7,6 +7,19 @@ function selectedTeams () {
     var checkTeam = "gm" + pickedTeam;
     console.log(checkTeam);
 
+    var editBtn = $("<button>", {
+        class: "btn btn-secondary",
+        text: "Edit Pick",
+        id: "edit",
+        click: function () {
+            localStorage.removeItem("week" + week, pickedTeam);
+            $("#gm" + pickedTeam).removeClass("orange");
+            $("#edit").remove();
+        }
+    });
+
+    $("#weekNo").append(editBtn);
+
     var queryURL = "https://api.sportsdata.io/v3/nfl/scores/json/ScoresByWeek/2020/" + week + "?key=3efa69063c844191a2ddeba7e1356b50"
     
     $.ajax({
@@ -32,6 +45,7 @@ function selectedTeams () {
             $(gameAway).attr("id", "gm" + response[i].AwayTeam);
             var gameHome = $("<p>");
             $(gameHome).attr("id", "gm" + response[i].HomeTeam);
+            //$(gameHome).addClass("orange");
             var buttonRow = $("<p>");
             $(buttonRow).addClass("centerBtn");
             $(buttonRow).attr("id", "btnRow" + i);
@@ -74,8 +88,14 @@ function selectedTeams () {
             $("#gm" + response[i].AwayTeam).text(response[i].AwayTeam + " " + response[i].AwayScore);
             $("#gm" + response[i].HomeTeam).text(response[i].HomeTeam + " " + response[i].HomeScore);
             }
-        }
 
-        
+            if (response[i].AwayTeam === pickedTeam) {
+                $("#gm" + response[i].AwayTeam).addClass("orange");
+            }
+
+            else if (response[i].HomeTeam === pickedTeam) {
+                $("#gm" + response[i].HomeTeam).addClass("orange");
+            }
+        } 
     });
 }

@@ -82,7 +82,7 @@ function queryAPI() {
                                             $("#edit").remove();
                                         }
                                     });
-                                    $("#gm" + weekentry).append(editBtn);
+                                    $("#weekNO").append(editBtn);
                                 }
                             });
 
@@ -137,8 +137,8 @@ function queryAPI() {
                                     $("#gm" + weekentry).addClass("orange");
                                     $("#hidden").addClass("hidden");
                                     var editBtn = $("<button>", {
-                                        class: "btn btn-secondary btn-sm",
-                                        text: "Edit",
+                                        class: "btn btn-secondary",
+                                        text: "Edit Pick",
                                         id: "edit",
                                         click: function () {
                                             localStorage.removeItem("week" + week, weekentry);
@@ -147,7 +147,7 @@ function queryAPI() {
                                             $("#edit").remove();
                                         }
                                     });
-                                    $("#gm" + weekentry).append(editBtn);
+                                    $("#weekNo").append(editBtn);
                                 }
                             });
 
