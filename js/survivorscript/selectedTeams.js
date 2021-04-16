@@ -45,7 +45,6 @@ function selectedTeams () {
             $(gameAway).attr("id", "gm" + response[i].AwayTeam);
             var gameHome = $("<p>");
             $(gameHome).attr("id", "gm" + response[i].HomeTeam);
-            //$(gameHome).addClass("orange");
             var buttonRow = $("<p>");
             $(buttonRow).addClass("centerBtn");
             $(buttonRow).attr("id", "btnRow" + i);

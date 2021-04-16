@@ -46,7 +46,9 @@ $(".selectWeek").on("click", function() {
     localStorage.setItem("week", week);
     $("#weekNo").text("Week " + week);
 
-    if (localStorage.getItem("week" + week) != null) {
+
+
+    if (localStorage.getItem("week" + week) != null) {        
         selectedTeams();
         console.log("click-selectedTeams");
     }

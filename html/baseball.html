@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Endless Fantasy Sports</title>
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class = "navbar wrapper">
+    
+            <h1>Endless Fantasy Sports</h1>
+
+            <div class="login-page">
+                <div class="form">
+                    <form class = "register-form">
+                        <input type="text" placeholder="username"/>
+                        <input type="text" placeholder="password"/>
+                        <input type="text" placeholder="email"/>
+                        <button type="button" class= "btn btn-primary">Create Login</button>
+                        <p class= "message">Already Registered? <a href="#">Login</a></p>
+                    </form>
+
+                    <form class = "login-form">
+                        <input type="text" placeholder="username"/>
+                        <input type="text" placeholder="password"/>
+                        <button type="button" class = "btn btn-primary">Login</button>
+                        <p class= "message">Not Registered? <a href="#">Create Account</a></p>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        <br>
+
+        <!-- Main Section -->
+        <section class = "container content wrapper">
+
+            <!-- Row 3 -->
+            <div id= "positions" class = "positionList">
+                <div id="team">
+                    <h1>Team Score</h1>
+                    <h1 id="teamRuns"></h1>
+                </div>
+                <div id="c">
+                    <h2>C</h2>
+                    <h2 id="cname"></h2>
+                    <h2 id="cRuns"></h2>
+                </div>
+                <div id="1b">
+                    <h2>1B</h2>
+                    <h2 id="firstname"></h2>
+                    <h2 id="firstRuns"></h2>
+                </div>
+                <div id="2b">
+                    <h2>2B</h2>
+                    <h2 id="secondname"></h2>
+                    <h2 id="secondRuns"></h2>
+                </div>
+                <div id="3b">
+                    <h2>3B</h2>
+                    <h2 id="thirdname"></h2>
+                    <h2 id="thirdRuns"></h2>
+                </div>
+                <div id="ss">
+                    <h2>SS</h2>
+                    <h2 id="ssname"></h2>
+                    <h2 id="ssRuns"></h2>
+                </div>
+                <div id="of1">
+                    <h2>OF</h2>
+                    <h2 id="of1name"></h2>
+                    <h2 id="of1Runs"></h2>
+                </div>
+                <div id="of2">
+                    <h2>OF</h2>
+                    <h2 id="of2name"></h2>
+                    <h2 id="of2Runs"></h2>
+                </div>
+                <div id="of3">
+                    <h2>OF</h2>
+                    <h2 id="of3name"></h2>
+                    <h2 id="of3Runs"></h2>
+                </div>
+                <div id="dh">
+                    <h2>DH</h2>
+                    <h2 id="dhname"></h2>
+                    <h2 id="dhRuns"></h2>
+                </div>
+                <div id="pit">
+                    <h2>PIT</h2>
+                    <h2 id="pitname"></h2>
+                    <h2 id="pitRuns"></h2>
+                </div>
+
+            </div>  
+
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="../js/baseballscript/catcher.js"></script>
+        <script src="../js/baseballscript/firstbase.js"></script>
+        <script src="../js/baseballscript/secondbase.js"></script>
+        <script src="../js/baseballscript/thirdbase.js"></script>
+        <script src="../js/baseballscript/shortstop.js"></script>
+        <script src="../js/baseballscript/of1.js"></script>
+        <script src="../js/baseballscript/of2.js"></script>
+        <script src="../js/baseballscript/of3.js"></script>
+        <script src="../js/baseballscript/designatedhitter.js"></script>
+        <script src="../js/baseballscript/teamscore.js"></script>
+
+
+    </body>
+</html>
