@@ -30,10 +30,7 @@ $.ajax({
     var sb = parseInt(response.sport_hitting_tm.queryResults.row.sb);
 
     var thirdRuns = (tb + ibb + bb + sb)/4;
-    var display3b = third + " " + thirdRuns;
 
-    var thirddetails = $("<h2>", {
-        text: display3b,
-    });
-    $("#3b").append(thirddetails);
+    $("#thirdname").text(third);
+    $("#thirdRuns").text(thirdRuns);
 });

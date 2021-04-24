@@ -29,11 +29,9 @@ $.ajax({
     var bb = parseInt(response.sport_hitting_tm.queryResults.row.bb);
     var sb = parseInt(response.sport_hitting_tm.queryResults.row.sb);
 
-    var firstRuns = (tb + ibb + bb + sb)/4;
-    var display1b = first + " " + firstRuns;
-
-    var firstdetails = $("<h2>", {
-        text: display1b,
-    });
-    $("#1b").append(firstdetails);
+    var firstRuns = (tb + ibb + bb + sb);
+    localStorage.setItem("1B", firstRuns);
+    var runsScored = firstRuns/4;
+    $("#firstname").text(first);
+    $("#firstRuns").text(runsScored);
 });

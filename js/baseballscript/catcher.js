@@ -29,8 +29,9 @@ $.ajax({
     var bb = parseInt(response.sport_hitting_tm.queryResults.row.bb);
     var sb = parseInt(response.sport_hitting_tm.queryResults.row.sb);
 
-    var catcherRuns = (tb + ibb + bb + sb)/4;
-    
+    var catcherRuns = (tb + ibb + bb + sb);
+    localStorage.setItem("C", catcherRuns);
+    var runsScored = catcherRuns/4;
     $("#cname").text(catcher);
-    $("#cRuns").text(catcherRuns);
+    $("#cRuns").text(runsScored);
 });

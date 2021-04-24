@@ -1,9 +1,9 @@
-var catcherRuns = $("#cRuns").value;
-console.log(catcherRuns);
+var cRuns = localStorage.getItem("C");
+console.log(cRuns);
+var firstRuns = localStorage.getItem("1B");
+console.log(firstRuns);
 
-// var tmRuns = catcherRuns + firstRuns + secondRuns + thirdRuns + ssRuns + of1Runs + of2Runs + of3Runs + dhRuns
+var tmRuns = (parseInt(cRuns) + parseInt(firstRuns))/4; 
+// + parseInt(firstRuns)
 
-// var teamDetails = $("<h1>", {
-//     text: tmRuns,
-// });
-// $("#team").append(teamDetails);
+$("#teamRuns").text(tmRuns);

@@ -20,6 +20,10 @@ h1 {
     float: left;
 }
 
+h2 {
+    padding: 10px;
+}
+
 h3 {
     float: left;
     color: orangered;
@@ -83,11 +87,24 @@ button {
     font-family: "Lexend Peta", sans-serif;
 }
 
-
 .scores {
     float: left;
     min-width: 200px;
     min-height: 200Spx;
     border: solid;
     font-family: "Lexend Peta", sans-serif;
+}
+
+.positionList {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.pos {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.leftCenter {
+    width: 80px;
 }
